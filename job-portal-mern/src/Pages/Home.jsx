@@ -36,18 +36,20 @@ const Home = () => {
   const calculatePages = () => {
     let startIndex = (currentPage - 1) * itemsPerpage;
     let endIndex = startIndex + itemsPerpage;
-    return startIndex, endIndex;
+    return {startIndex, endIndex};
   };
 
   // next page
   const nextPage = () => {
+    alert('next');
     if(currentPage <  Math.ceil(filterItems.length / itemsPerpage)){
       setCurrentPage(currentPage + 1);
     }
   }
-
+  
   // previous page
   const previousPage = () => {
+    alert('back');
     if(currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
@@ -88,7 +90,11 @@ const Home = () => {
           parseInt(maxPrice) <= parseInt(selected)
       );
     }
-    calculatePages();
+   
+    // extract data items
+    const {startIndex, endIndex} = calculatePages();
+    filteredJobs = filteredJobs.slice(startIndex, endIndex);
+
     return filteredJobs.map((data, i) => (
       // console.log('map data: ', data)
       <Cards key={i} data={data} />
@@ -127,11 +133,25 @@ const Home = () => {
                 </p>
               )}
               {/* pagination */}
-              <div className="flex justify-center mt-5 mb-5 space-x-8">
-                <button className="text-xs text-primary font-semibold" onClick={previousPage}>Previous</button>
+                {
+                  result.length > 0
+                  ? (
+                    <div className="flex justify-center mt-5 mb-5 space-x-8">
+                      <button className="text-xs text-primary font-semibold" onClick={previousPage}>Previous</button>
+                      <span className="text-xs text-gray-700 font-semibold">Pages: {currentPage} 0f {Math.ceil(filterItems.length / itemsPerpage)}</span>
+                      <button className="text-xs text-primary font-semibold" onClick={nextPage}>Next</button>
+                    </div>
+                  )
+                  : ''
+                }
+
+              {/* 
+                <div className="flex justify-center mt-5 mb-5 space-x-8">
+                
                 <span>Page count</span>
-                <button className="text-xs text-primary font-semibold" onClick={nextPage}>Next</button>
+                
               </div>
+              */}
             </div>
             <div className="bg-white p-4 rounded">12</div>
           </div>
