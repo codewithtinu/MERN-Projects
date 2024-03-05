@@ -41,7 +41,6 @@ const Home = () => {
 
   // next page
   const nextPage = () => {
-    alert('next');
     if(currentPage <  Math.ceil(filterItems.length / itemsPerpage)){
       setCurrentPage(currentPage + 1);
     }
@@ -49,7 +48,6 @@ const Home = () => {
   
   // previous page
   const previousPage = () => {
-    alert('back');
     if(currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
@@ -136,10 +134,10 @@ const Home = () => {
                 {
                   result.length > 0
                   ? (
-                    <div className="flex justify-center mt-5 mb-5 space-x-8">
-                      <button className="text-xs text-primary font-semibold" onClick={previousPage}>Previous</button>
+                    <div className="flex justify-center mt-4 mb-2 space-x-8">
+                      <button className="text-xs text-primary font-semibold" onClick={previousPage} disabled = {currentPage === 1}>Previous</button>
                       <span className="text-xs text-gray-700 font-semibold">Pages: {currentPage} 0f {Math.ceil(filterItems.length / itemsPerpage)}</span>
-                      <button className="text-xs text-primary font-semibold" onClick={nextPage}>Next</button>
+                      <button className="text-xs text-primary font-semibold hover:underline" onClick={nextPage} disabled = {currentPage === Math.ceil(filterItems.length / itemsPerpage )}>Next</button>
                     </div>
                   )
                   : ''

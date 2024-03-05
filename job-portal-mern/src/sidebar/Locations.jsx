@@ -3,7 +3,7 @@ import Inputs from "./Inputs";
 const Locations = ({ handleChange }) => {
   return (
     <>
-      <h4 className="font-semibold text-primary">Locations</h4>
+      <h4 className="font-semibold text-primary py-1">Locations</h4>
       <label className="sidebar-label-container">
         <input
           type="radio"

@@ -4,7 +4,7 @@ const Banner = (props) => {
     const {query, inputHandler} = props;
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto xl:px-24 px-4 md:py-20 py-14">
+      <div className="max-w-screen-2xl container mx-auto xl:px-24 px-4 md:py-5 py-14">
         <h1 className="text-5xl font-bold text-gray-800 mb-3">
           Find your <span className="text-blue-600">dream job</span> today!
         </h1>
