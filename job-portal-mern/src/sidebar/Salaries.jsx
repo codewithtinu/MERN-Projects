@@ -12,11 +12,10 @@ const Salaries = ({handleChange, handleClick}) => {
         </div>
         <div className="mt-4">
             <Inputs handleChange ={handleChange} value="" title = "Any" name = "test" />
-            <Inputs handleChange ={handleChange} value="40" title = "< 40k" name = "test" />
-            <Inputs handleChange ={handleChange} value="60" title = "< 60k" name = "test" />
-            <Inputs handleChange ={handleChange} value="80" title = "< 80k" name = "test" />
-            <Inputs handleChange ={handleChange} value="100" title = "< 100k" name = "test" />
-            <Inputs handleChange ={handleChange} value="125" title = "< 125k" name = "test" />
+            <Inputs handleChange ={handleChange} value="30" title = "< 30000k" name = "test" />
+            <Inputs handleChange ={handleChange} value="50" title = "< 50000k" name = "test" />
+            <Inputs handleChange ={handleChange} value="80" title = "< 80000k" name = "test" />
+            <Inputs handleChange ={handleChange} value="100" title = "< 100000k" name = "test" />
         </div>
         
         </>

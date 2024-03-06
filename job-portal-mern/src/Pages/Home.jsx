@@ -38,7 +38,7 @@ const Home = () => {
     let endIndex = startIndex + itemsPerpage;
     return {startIndex, endIndex};
   };
-
+  
   // next page
   const nextPage = () => {
     if(currentPage <  Math.ceil(filterItems.length / itemsPerpage)){
@@ -80,11 +80,13 @@ const Home = () => {
           maxPrice,
           experienceLevel,
           employmentType,
+          postingDate
         }) =>
           jobLocation.toLowerCase() === selected.toLowerCase() ||
           salaryType.toLowerCase() === selected.toLowerCase() ||
           employmentType.toLowerCase() === selected.toLowerCase() ||
           experienceLevel.toLowerCase() === selected.toLowerCase() ||
+          postingDate.toLowerCase() <= selected.toLowerCase() ||
           parseInt(maxPrice) <= parseInt(selected)
       );
     }

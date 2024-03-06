@@ -1,3 +1,4 @@
+import JobPosting from "./Jobposting";
 import Locations from "./Locations";
 import Salaries from "./Salaries";
 
@@ -9,7 +10,8 @@ const Sidebar = ({handleChange, handleClick}) => {
             <Locations handleChange = {handleChange} />
             {/* salary type */}
             <Salaries handleChange = {handleChange} handleClick = {handleClick} />
-            {/* employment type */}
+            {/* Job Posting */}
+            <JobPosting handleChange = {handleChange} />
 
 
 
