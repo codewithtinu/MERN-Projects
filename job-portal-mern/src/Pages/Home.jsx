@@ -11,7 +11,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   // items per page
-  const itemsPerpage = 6;
+  const itemsPerpage = 4;
 
   useEffect(() => {
     setIsLoading(true);
@@ -73,6 +73,8 @@ const Home = () => {
     }
     // category filtering
     if (selected) {
+      // debugger;
+      console.log('selected: ', selected);
       filteredJobs = filteredJobs.filter(
         ({
           jobLocation,
@@ -83,11 +85,11 @@ const Home = () => {
           postingDate
         }) =>
           jobLocation.toLowerCase() === selected.toLowerCase() ||
+          parseInt(maxPrice) <= parseInt(selected) ||
+          // postingDate <= selected ||
           salaryType.toLowerCase() === selected.toLowerCase() ||
           employmentType.toLowerCase() === selected.toLowerCase() ||
-          experienceLevel.toLowerCase() === selected.toLowerCase() ||
-          postingDate.toLowerCase() <= selected.toLowerCase() ||
-          parseInt(maxPrice) <= parseInt(selected)
+          experienceLevel.toLowerCase() === selected.toLowerCase() 
       );
     }
    
