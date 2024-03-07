@@ -23,11 +23,7 @@
       "maxPrice": "50",
       "salaryType": "Yearly",
       "jobLocation": "San Francisco",
-<<<<<<< HEAD
       "postingDate": "2024-02-28",
-=======
-      "postingDate": "2024-03-05",
->>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Internship",
       "employmentType": "Temporary",
       "vacancy" : 5,
@@ -42,11 +38,7 @@
       "maxPrice": "50",
       "salaryType": "Yearly",
       "jobLocation": "Seattle",
-<<<<<<< HEAD
       "postingDate": "2024-02-18",
-=======
-      "postingDate": "2024-03-06",
->>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Any experience",
       "employmentType": "Full-time", 
       "vacancy" : 35,
@@ -61,11 +53,7 @@
       "maxPrice": "50",
       "salaryType": "Monthly",
       "jobLocation": "London",
-<<<<<<< HEAD
       "postingDate": "2024-03-04",
-=======
-      "postingDate": "2024-02-29",
->>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Work remotely",
       "employmentType": "Part-time",
       "vacancy" : 65,
@@ -80,11 +68,7 @@
       "maxPrice": "75",
       "salaryType": "Hourly",
       "jobLocation": "London",
-<<<<<<< HEAD
       "postingDate": "2024-01-21",
-=======
-      "postingDate": "2024-02-27",
->>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Intership",
       "employmentType": "Full-time",
       "vacancy" : 24,
@@ -99,11 +83,6 @@
       "maxPrice": "120",
       "salaryType": "Yearly",
       "jobLocation": "Boston",
-<<<<<<< HEAD
-      "postingDate": "2024-01-10",
-=======
-      "postingDate": "2024-03-01",
->>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Intership",
       "employmentType": "Temporary",
       "vacancy" : 3,
@@ -118,11 +97,6 @@
       "maxPrice": "80",
       "salaryType": "Hourly",
       "jobLocation": "Brussels",
-<<<<<<< HEAD
-      "postingDate": "2024-02-19",
-=======
-      "postingDate": "2024-01-09",
->>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Any experience",
       "employmentType": "Full-time",
       "vacancy" : 78,
@@ -137,11 +111,6 @@
       "maxPrice": "50",
       "salaryType": "Hourly",
       "jobLocation": "San Francisco",
-<<<<<<< HEAD
-      "postingDate": "2024-03-1",
-=======
-      "postingDate": "2024-02-29",
->>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Internship",
       "employmentType": "Temporary",
       "vacancy" : 96,
@@ -171,11 +140,6 @@
       "maxPrice": "50",
       "salaryType": "Monthly",
       "jobLocation": "London",
-<<<<<<< HEAD
-      "postingDate": "2024-02-15",
-=======
-      "postingDate": "2024-02-26",
->>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Work remotely",
       "employmentType": "Part-time",
       "vacancy" : 71,
@@ -190,11 +154,7 @@
       "maxPrice": "75",
       "salaryType": "Yearly",
       "jobLocation": "London",
-<<<<<<< HEAD
-      "postingDate": "2024-02-05",
-=======
       "postingDate": "2024-01-31",
->>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Intership",
       "employmentType": "Full-time",
       "vacancy" : 3,
@@ -209,11 +169,7 @@
       "maxPrice": "120",
       "salaryType": "Yearly",
       "jobLocation": "Boston",
-<<<<<<< HEAD
       "postingDate": "2024-01-02",
-=======
-      "postingDate": "2024-03-04",
->>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Intership",
       "employmentType": "Temporary",
       "vacancy" : 9,

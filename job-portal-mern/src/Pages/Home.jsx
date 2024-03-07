@@ -16,7 +16,7 @@ const Home = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("jobs.json")
+    fetch('jobs.json')
       .then((resp) => resp.json())
       .then((data) => {
         setJobs(data);
@@ -90,13 +90,9 @@ const Home = () => {
           // postingDate <= selected ||
           salaryType.toLowerCase() === selected.toLowerCase() ||
           employmentType.toLowerCase() === selected.toLowerCase() ||
-<<<<<<< HEAD
-          experienceLevel.toLowerCase() === selected.toLowerCase() ||
           postingDate <= selected ||
-          parseInt(maxPrice) <= parseInt(selected)
-=======
+          parseInt(maxPrice) <= parseInt(selected) ||
           experienceLevel.toLowerCase() === selected.toLowerCase() 
->>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       );
     }
    
