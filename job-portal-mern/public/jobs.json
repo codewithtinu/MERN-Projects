@@ -1,119 +1,155 @@
 [
     {
       "id": 1,
-      "companyName": "Linear company - 1",
+      "companyName": "Linear company",
       "jobTitle": "Software Engineer",
       "companyLogo": "/images/Linear.png",
       "minPrice": "20",
       "maxPrice": "30",
       "salaryType": "Yearly",
       "jobLocation": "Brussels",
-      "postingDate": "2024-03-05",
+      "postingDate": "2024-03-06",
       "experienceLevel": "Any experience",
       "employmentType": "Full-time",
+      "vacancy" : 10,
       "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
     },
     {
       "id": 2,
-      "companyName": "Notion - 2",
+      "companyName": "Notion",
       "jobTitle": "Web Developer",
       "companyLogo": "/images/Notion.png",
       "minPrice": "40",
       "maxPrice": "50",
       "salaryType": "Yearly",
       "jobLocation": "San Francisco",
+<<<<<<< HEAD
       "postingDate": "2024-02-28",
+=======
+      "postingDate": "2024-03-05",
+>>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Internship",
       "employmentType": "Temporary",
+      "vacancy" : 5,
       "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
     },
     {
       "id": 3,
-      "companyName": "Spline studio - 3",
+      "companyName": "Spline studio",
       "jobTitle": "Data Scientist",
       "companyLogo": "/images/Spline.png",
       "minPrice": "40",
       "maxPrice": "50",
       "salaryType": "Yearly",
       "jobLocation": "Seattle",
+<<<<<<< HEAD
       "postingDate": "2024-02-18",
+=======
+      "postingDate": "2024-03-06",
+>>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Any experience",
       "employmentType": "Full-time", 
+      "vacancy" : 35,
       "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
     },
     {
       "id": 4,
-      "companyName": "Raycast corp - 4",
+      "companyName": "Raycast corp",
       "jobTitle": "UI/UX Designer",
       "companyLogo": "/images/Raycast.png",
       "minPrice": "40",
       "maxPrice": "50",
       "salaryType": "Monthly",
       "jobLocation": "London",
+<<<<<<< HEAD
       "postingDate": "2024-03-04",
+=======
+      "postingDate": "2024-02-29",
+>>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Work remotely",
       "employmentType": "Part-time",
+      "vacancy" : 65,
       "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
     },
     {
       "id": 5,
-      "companyName": "Loom - 5",
+      "companyName": "Loom",
       "jobTitle": "Frontend Developer",
       "companyLogo": "/images/Loom.png",
       "minPrice": "50",
       "maxPrice": "75",
       "salaryType": "Hourly",
       "jobLocation": "London",
+<<<<<<< HEAD
       "postingDate": "2024-01-21",
+=======
+      "postingDate": "2024-02-27",
+>>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Intership",
       "employmentType": "Full-time",
+      "vacancy" : 24,
       "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
     },
     {
       "id": 6,
-      "companyName": "Trainline group - 6",
+      "companyName": "Trainline group",
       "jobTitle": "DevOps Engineer",
       "companyLogo": "/images/Trainline.png",
       "minPrice": "80",
       "maxPrice": "120",
       "salaryType": "Yearly",
       "jobLocation": "Boston",
+<<<<<<< HEAD
       "postingDate": "2024-01-10",
+=======
+      "postingDate": "2024-03-01",
+>>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Intership",
       "employmentType": "Temporary",
+      "vacancy" : 3,
       "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
     },
     {
       "id": 1,
-      "companyName": "Linear company - 7",
+      "companyName": "Linear company",
       "jobTitle": "Software Engineer",
       "companyLogo": "/images/Linear.png",
       "minPrice": "30",
       "maxPrice": "80",
       "salaryType": "Hourly",
       "jobLocation": "Brussels",
+<<<<<<< HEAD
       "postingDate": "2024-02-19",
+=======
+      "postingDate": "2024-01-09",
+>>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Any experience",
       "employmentType": "Full-time",
+      "vacancy" : 78,
       "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
     },
     {
       "id": 2,
-      "companyName": "Notion  - 8",
+      "companyName": "Notion",
       "jobTitle": "Web Developer",
       "companyLogo": "/images/Notion.png",
       "minPrice": "40",
       "maxPrice": "50",
       "salaryType": "Hourly",
       "jobLocation": "San Francisco",
+<<<<<<< HEAD
       "postingDate": "2024-03-1",
+=======
+      "postingDate": "2024-02-29",
+>>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Internship",
       "employmentType": "Temporary",
+      "vacancy" : 96,
       "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
     },
     {
       "id": 3,
-      "companyName": "Spline studio - 9",
+      "companyName": "Spline studio",
       "jobTitle": "Data Scientist",
       "companyLogo": "/images/Spline.png",
       "minPrice": "40",
@@ -123,48 +159,64 @@
       "postingDate": "2024-03-03",
       "experienceLevel": "Any experience",
       "employmentType": "Full-time", 
+      "vacancy" : 11,
       "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
     },
     {
       "id": 4,
-      "companyName": "Raycast corp - 10",
+      "companyName": "Raycast corp",
       "jobTitle": "UI/UX Designer",
       "companyLogo": "/images/Raycast.png",
       "minPrice": "40",
       "maxPrice": "50",
       "salaryType": "Monthly",
       "jobLocation": "London",
+<<<<<<< HEAD
       "postingDate": "2024-02-15",
+=======
+      "postingDate": "2024-02-26",
+>>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Work remotely",
       "employmentType": "Part-time",
+      "vacancy" : 71,
       "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
     },
     {
       "id": 5,
-      "companyName": "Loom - 11",
+      "companyName": "Loom",
       "jobTitle": "Frontend Developer",
       "companyLogo": "/images/Loom.png",
       "minPrice": "50",
       "maxPrice": "75",
       "salaryType": "Yearly",
       "jobLocation": "London",
+<<<<<<< HEAD
       "postingDate": "2024-02-05",
+=======
+      "postingDate": "2024-01-31",
+>>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Intership",
       "employmentType": "Full-time",
+      "vacancy" : 3,
       "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
     },
     {
       "id": 6,
-      "companyName": "Trainline group - 12",
+      "companyName": "Trainline group",
       "jobTitle": "DevOps Engineer",
       "companyLogo": "/images/Trainline.png",
       "minPrice": "80",
       "maxPrice": "120",
       "salaryType": "Yearly",
       "jobLocation": "Boston",
+<<<<<<< HEAD
       "postingDate": "2024-01-02",
+=======
+      "postingDate": "2024-03-04",
+>>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       "experienceLevel": "Intership",
       "employmentType": "Temporary",
+      "vacancy" : 9,
       "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
     }
   ]

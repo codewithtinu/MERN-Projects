@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import Cards from "../components/Cards";
 import Jobs from "./Jobs";
 import Sidebar from "../sidebar/sidebar";
+import Postjob from "../Jobs/Postjob";
 // import jobProfile from "../../public/jobs.json";
 const Home = () => {
   const [query, setQuery] = useState("");
@@ -11,7 +12,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   // items per page
-  const itemsPerpage = 6;
+  const itemsPerpage = 4;
 
   useEffect(() => {
     setIsLoading(true);
@@ -73,6 +74,8 @@ const Home = () => {
     }
     // category filtering
     if (selected) {
+      // debugger;
+      console.log('selected: ', selected);
       filteredJobs = filteredJobs.filter(
         ({
           jobLocation,
@@ -83,11 +86,17 @@ const Home = () => {
           postingDate
         }) =>
           jobLocation.toLowerCase() === selected.toLowerCase() ||
+          parseInt(maxPrice) <= parseInt(selected) ||
+          // postingDate <= selected ||
           salaryType.toLowerCase() === selected.toLowerCase() ||
           employmentType.toLowerCase() === selected.toLowerCase() ||
+<<<<<<< HEAD
           experienceLevel.toLowerCase() === selected.toLowerCase() ||
           postingDate <= selected ||
           parseInt(maxPrice) <= parseInt(selected)
+=======
+          experienceLevel.toLowerCase() === selected.toLowerCase() 
+>>>>>>> 3df771da1bbe60e1cddfedbb1c0a837dc2bbb5f8
       );
     }
    
@@ -153,7 +162,11 @@ const Home = () => {
               </div>
               */}
             </div>
-            <div className="bg-white p-4 rounded">12</div>
+            <div className="bg-white p-4 rounded">
+              <Postjob result = {jobs} />
+                
+
+            </div>
           </div>
 
           {/* <div className="bg-[#fafafa] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12 ">
