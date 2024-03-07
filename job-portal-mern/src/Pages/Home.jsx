@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import Cards from "../components/Cards";
 import Jobs from "./Jobs";
 import Sidebar from "../sidebar/sidebar";
+import Postjob from "../Jobs/Postjob";
 // import jobProfile from "../../public/jobs.json";
 const Home = () => {
   const [query, setQuery] = useState("");
@@ -155,7 +156,11 @@ const Home = () => {
               </div>
               */}
             </div>
-            <div className="bg-white p-4 rounded">12</div>
+            <div className="bg-white p-4 rounded">
+              <Postjob result = {jobs} />
+                
+
+            </div>
           </div>
 
           {/* <div className="bg-[#fafafa] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12 ">
