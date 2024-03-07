@@ -8,9 +8,9 @@ const JobPosting = ({ handleChange }) => {
     let sevenDays = new Date(now - 7 * 24 * 60 * 60 * 1000);
     let thirtyDays = new Date(now - 30 * 24 * 60 * 60 * 1000);
     // converting Date object into string;
-    today = today.toISOString().slice(0, 10);
-    sevenDays = sevenDays.toISOString().slice(0, 10);
-    thirtyDays = thirtyDays.toISOString().slice(0, 10);
+   const n1 = today.toISOString().slice(0, 10);
+  const  n2 = sevenDays.toISOString().slice(0, 10);
+   const n3 = thirtyDays.toISOString().slice(0, 10);
     // console.log('today: ', today);
     // console.log('sevenDays: ', sevenDays);
     // console.log('thirtyDays: ', thirtyDays);
@@ -23,13 +23,13 @@ const JobPosting = ({ handleChange }) => {
           type="radio"
           name="test"
           onChange={handleChange}
-          value=""
+          value="test"
         />
         <span className="checkmark"></span> All time
       </label>
-      <Inputs handleChange ={handleChange} value={today} title = "Today" name = "test" />
-      <Inputs handleChange ={handleChange} value={sevenDays} title = "Last 7 days" name = "test" />
-      <Inputs handleChange ={handleChange} value={thirtyDays} title = "Last 30 days" name = "test" />
+      <Inputs handleChange ={handleChange} value={n1} title = "Today" name = "test" />
+      <Inputs handleChange ={handleChange} value={n2} title = "Last 7 days" name = "test" />
+      <Inputs handleChange ={handleChange} value={n3} title = "Last 30 days" name = "test" />
     </>
   );
 };

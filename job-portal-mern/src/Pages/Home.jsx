@@ -86,7 +86,7 @@ const Home = () => {
           salaryType.toLowerCase() === selected.toLowerCase() ||
           employmentType.toLowerCase() === selected.toLowerCase() ||
           experienceLevel.toLowerCase() === selected.toLowerCase() ||
-          postingDate.toLowerCase() <= selected.toLowerCase() ||
+          postingDate <= selected ||
           parseInt(maxPrice) <= parseInt(selected)
       );
     }
@@ -125,7 +125,7 @@ const Home = () => {
                 <p className="text-base text-primary/60 font-semibold">
                   Loading...
                 </p>
-              ) : result.length > 0 ? (
+              ) : result.length >= 0 ? (
                 <Jobs result={result} />
               ) : (
                 <p className="text-base text-primary/80 font-semibold">
