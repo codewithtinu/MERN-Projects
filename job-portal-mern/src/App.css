@@ -41,6 +41,13 @@ li {
   cursor: pointer;
 }
 
+.card img {
+  width: 70px;
+  height: 70px;
+  border:1px solid #f0f0f0;
+  padding:1px;
+
+}
 
 .card-title {
   margin-bottom: 1rem;
@@ -153,5 +160,8 @@ li {
 }
 
 .create-job-input{
-  @apply block w-full flex-1 bg-white py-1.5 pl-3 text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm sm:leading-6
+  @apply block w-full flex-1 bg-white py-1.5 pl-3 pr-2 text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm sm:leading-6
+}
+.create-job-error {
+  @apply text-sm text-red-600
 }

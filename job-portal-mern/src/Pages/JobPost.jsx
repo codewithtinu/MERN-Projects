@@ -6,23 +6,32 @@ const JobPost = () => {
   const {
     register,
     handleSubmit,
+    reset,
   //  watch,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
     data.skills = selectSkills;
-    console.log(data);
+   
+    // console.log(data);
 
-    fetch("http://localhost:9645/post-job", {
+    fetch("http://localhost:2128/post-job", {
       method: "POST",
       headers : {
-        'Content-type': 'application/json',
+        'content-type': 'application/json',
+
       },
       body: JSON.stringify(data)
     })
     .then(resp => resp.json())
-    .then((jobs) => {console.log(jobs)})
+
+    .then((jobs) => {
+      if(jobs.acknowledged === true){
+        alert('Job Posted Successfully');
+      }
+      reset()
+    })
     .catch(err => console.log(err))
 
 
