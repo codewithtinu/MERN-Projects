@@ -12,8 +12,8 @@ const Navbar = () => {
 
   const navLink = [
     { path: "/", title: "Search Job" },
-    { path: "/job-salary", title: "Salary Estimate" },
     { path: "/my-jobs", title: "My Job" },
+    { path: "/job-salary", title: "Salary Estimate" },
     { path: "/job-post", title: "Post A Job" },
   ];
 

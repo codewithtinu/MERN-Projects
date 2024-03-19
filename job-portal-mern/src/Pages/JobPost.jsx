@@ -206,12 +206,30 @@ const JobPost = () => {
               </label>
               <textarea
                 className="create-job-input"
+                defaultValue="Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
                 placeholder="Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
                 {...register("description")}
                 rows={6}
               />
               
               {errors.jobTitle && <span className="create-job-error">This field is required</span>}
+            </div>
+          </div>
+          {/* Last row */}
+          {/* row -- 5 */}
+          <div className="create-job-flex">
+          <div className="w-full">
+              <label className="block text-primary py-1.5 text-lg">
+                Job Posted By
+              </label>
+              <input
+                type="email"
+                className="create-job-input"
+                placeholder="Ex. your@email.com"
+                {...register("postedBy", {required: true})}
+              />
+              
+              {errors.postedBy && <span className="create-job-error">This field is required</span>}
             </div>
           </div>
           <div className="pt-4">

@@ -156,7 +156,7 @@ li {
 /* create a job page */
 
 .create-job-flex{
-  @apply flex flex-col lg:flex-row lg:flex-wrap items-center justify-between gap-8;
+  @apply flex flex-col lg:flex-row  items-center justify-between gap-8;
 }
 
 .create-job-input{
@@ -164,4 +164,7 @@ li {
 }
 .create-job-error {
   @apply text-sm text-red-600
+}
+.job-table-header {
+  @apply px-6 bg-blue-50 text-blue-500 align-middle border border-solid border-blue-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center
 }
