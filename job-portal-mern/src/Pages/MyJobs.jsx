@@ -13,8 +13,9 @@ const MyJobs = () => {
     fetch("http://localhost:2128/my-jobs/vinay2128@gmail.com")
       .then((resp) => resp.json())
       .then((data) => {
-        console.log("data: ", data);
+        // console.log("data: ", data);
         setJobs(data);
+        // handleFilterData();
         setIsLoading(false);
       })
       .catch((err) => console.log(err));
@@ -22,15 +23,21 @@ const MyJobs = () => {
   }, [searchText]);
 
   // filter job
-  
+  let filterJobs = jobs.filter(
+    (item) =>
+      item.jobTitle.toLowerCase().indexOf(searchText.toLowerCase()) !== -1
+  );
+  useEffect(() => {
+    
+    console.log('filtered by input: ', filterJobs);
+    console.log(searchText);
+    setJobs(filterJobs)
+  },[])
 
   // filter data on button
   const handleFilterData = () => {
-    const filterJobs = jobs.filter(
-      (item) =>
-        item.jobTitle.toLowerCase().indexOf(searchText.toLowerCase()) !== -1
-    );
-    // console.log('filtered by input: ', filterJobs);
+    setIsLoading(true);
+    
      setJobs(filterJobs);
     // console.log('filtered by button: ', jobs);
     setIsLoading(false);
@@ -74,7 +81,7 @@ const MyJobs = () => {
         <button
           className="bg-blue-600 text-white px-4 py-1.5 cursor-pointer focus:outline-none"
           onClick={() => {
-            handleFilterData;
+            handleFilterData();
           }}
         >
           Search
@@ -82,7 +89,7 @@ const MyJobs = () => {
       </div>
       {/* job  listing in table format */}
       <div>
-        jobcount: {jobs.length}
+        {/* jobcount: {jobs.length} */}
         {/* tables */}
         <section className="py-1 bg-blueGray-50">
           <div className="xl:w-8/12 w-full mb-12 xl:mb-0 px-4 mx-auto mt-5">
@@ -129,7 +136,7 @@ const MyJobs = () => {
                                   <td className="border-t-0 px-6 align-middle border-l-0  border-r-0 text-xs whitespace-nowrap p-4 text-right">{job.minPrice} - {job.maxPrice}</td>
                                   <td className="border-t-0 px-6 align-middle border-l-0  border-r-0 text-xs whitespace-nowrap p-4 text-right">
                                     <button className="px-3 py-1.5 mr-2">
-                                      <Link to={`/edit/${job._id}`}><RiEdit2Fill className="text-lg font-semibold text-gray-600"/><span className="hidden">Edit</span></Link>
+                                      <Link to={`/edit/${job?._id}`}><RiEdit2Fill className="text-lg font-semibold text-gray-600"/><span className="hidden">Edit</span></Link>
                                     </button>
                                     <button className="px-3 py-1.5" onClick={() => handleDelete(job._id)}><MdDelete className="text-lg font-semibold text-gray-600"/><span className="hidden">Delete</span></button>
                                   </td>

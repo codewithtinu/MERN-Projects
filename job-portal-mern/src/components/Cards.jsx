@@ -3,7 +3,7 @@ import { FiCalendar, FiClock, FiDollarSign, FiMapPin } from "react-icons/fi";
 const Cards = ({ data }) => {
   // console.log(`data: `, data);
   const {
-            jobTitle, companyName, companyLogo, minPrice,
+            _id,jobTitle, companyName, companyLogo, minPrice,
             maxPrice, salaryType, jobLocation, postingDate,
             experienceLevel, employmentType, description
         } = data;
@@ -12,6 +12,8 @@ const Cards = ({ data }) => {
     <>
        <section >
             <div className="card ">
+                
+                <Link to={`/job-info/${_id}`}>
                 <div className="flex items-start gap-2">
                 <img src= {companyLogo} alt="" />
                 <div>
@@ -26,6 +28,7 @@ const Cards = ({ data }) => {
                     <p className="text-primary text-base py-2">{description}</p>
                 </div>
                 </div>
+                </Link>
             </div>
        </section>
 

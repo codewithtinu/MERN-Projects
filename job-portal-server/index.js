@@ -81,11 +81,13 @@ async function run() {
 
     // update single job data
     app.put('/update/:id', async(req, resp) => {
-      console.log('upadate id : ', req.params.id)
-      let result = await jobCollections.updateOne(
-        {_id: new ObjectId(req.params)},
-        {$set: {...req.body}}
-      )
+      const id = req.params.id;
+      const jobData = req.body;
+      const filter = {_id: new ObjectId(id)};
+      const options = {upsert: true};
+      const updatedoc = {$set: {...jobData}};
+      let result = await jobCollections.updateOne(filter, updatedoc, options);
+      console.log('result: ', result);
       resp.send(result);
     })
 

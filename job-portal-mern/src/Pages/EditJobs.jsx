@@ -1,10 +1,15 @@
 import { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLoaderData } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import CreatableSelect from 'react-select/creatable'
 
 const EditJobs = () => {
-    const id = useParams();
+    const {id} = useParams();
+    let {
+      _id, jobTitle, companyName, minPrice, maxPrice,
+      postingDate, jobLocation, salaryType, experienceLevel,
+      skills, employmentType, companyLogo, description, postedBy
+    } = useLoaderData();
     const myJobs = useNavigate();
     console.log('id in edit page: ', id);
     const [selectSkills, setSelectSkills] = useState(null);
@@ -14,34 +19,15 @@ const EditJobs = () => {
       handleSubmit,
       reset,
       formState: { errors },
-    } = useForm();
+    } = useForm({defaultValues: editJob,});
   
     //const {} = id
-    // get data
-    useEffect(() => {
-      fetch(`http://localhost:2128/all-jobs/${id.id}`)
-      .then(resp => resp.json())
-      .then(data => setEditJob(data))
-      .catch(err => console.log(err))
-    },[]);
-    // console.log('editJob : ', editJob);
-    // destructure editJob object
-    let {
-      jobTitle, companyName, minPrice, maxPrice,
-      postingDate, jobLocation, salaryType, experienceLevel,
-      skills, employmentType, companyLogo, description, postedBy
-    } = editJob;
-    // console.log('jobTitle : ', jobTitle);
-    // console.log('skills : ', skills);
-
-    
-
     const onSubmit = (data) => {
-      data.skills = selectSkills;
       console.log('updated data: ', data);
+      data.skills = selectSkills;
       // console.log(data);
   
-      fetch(`http://localhost:2128/update/${id.id}`, {
+      fetch(`http://localhost:2128/update/${id}`, {
         method: "PUT",
         headers : {
           'content-type': 'application/json',
@@ -54,14 +40,12 @@ const EditJobs = () => {
         if(jobs.acknowledged === true){
           alert('Job Updated Successfully');
         }
-        // reset()
         myJobs('/my-jobs')
+        reset(jobs);
       })
       .catch(err => console.log(err))
-  
-  
     };
-    
+    //const onErrors = errors => console.error(errors);
     const options = [
       {value: 'HTML', label: 'HTML'},
       {value: 'CSS', label: 'CSS'},
@@ -70,6 +54,17 @@ const EditJobs = () => {
       {value: 'React Js', label: 'React Js'},
       {value: 'MongoDB', label: 'MongoDB'},
     ]
+
+    // useEffect(() => {
+    //   fetch(`http://localhost:2128/all-jobs/${id}`)
+    //   .then(resp => resp.json())
+    //   .then(data => setEditJob(data))
+    //   .catch(err => console.log(err))
+    // },[reset]);
+    // destructure editJob object
+    
+    // console.log('jobTitle : ', jobTitle);
+    // console.log('skills : ', skills);
   return (
     <div className="max-w-screen-2xl mx-auto container lg:px-24 px-4 py-10">
       <h1 className="text-blue-900 text-2xl font-semibold">Post A Job</h1>
@@ -84,25 +79,25 @@ const EditJobs = () => {
               </label>
               <input
                 type="text"
-                defaultValue={jobTitle}
                 className="create-job-input"
                 placeholder="Jr. FrontEnd Developer"
+                defaultValue={jobTitle}
+                required
                 {...register("jobTitle", { required: true })}
               />
-              {errors.jobTitle && <span className="create-job-error">This field is required</span>}
+              {/* {errors.jobTitle && <span className="create-job-error">This field is required</span>} */}
             </div>
             <div className="lg:w-1/2 w-full">
               <label className="block text-primary py-1.5 text-lg">
                 Company Name
               </label>
               <input
-                defaultValue={companyName}
                 type="text"
                 className="create-job-input"
                 placeholder="Ex. Google"
+                defaultValue={companyName}
                 {...register("companyName", {required: true})}
               />
-              {errors.jobTitle && <span className="create-job-error">This field is required</span>}
             </div>
           </div>
             {/* row -- 2 */}
@@ -118,7 +113,7 @@ const EditJobs = () => {
                 placeholder="$ 20K"
                 {...register("minPrice", { required: true })}
               />
-              {errors.minPrice && <span className="create-job-error">This field is required</span>}
+              {/* {errors.minPrice && <span className="create-job-error">This field is required</span>} */}
             </div>
             <div className="lg:w-1/2 w-full">
               <label className="block text-primary py-1.5 text-lg">
@@ -131,7 +126,7 @@ const EditJobs = () => {
                 placeholder="--"
                 {...register("maxPrice", {required: true})}
               />
-              {errors.jobTitle && <span className="create-job-error">This field is required</span>}
+              {/* {errors.jobTitle && <span className="create-job-error">This field is required</span>} */}
             </div>
           </div>
           {/* row -- 3 */}
@@ -147,7 +142,7 @@ const EditJobs = () => {
                 placeholder="2024-03-06"
                 {...register("postingDate", {required: true})}
               />
-              {errors.jobTitle && <span className="create-job-error">This field is required</span>}
+              {/* {errors.jobTitle && <span className="create-job-error">This field is required</span>} */}
             </div>
             <div className="lg:w-1/2 w-full">
               <label className="block text-primary py-1.5 text-lg">
@@ -160,7 +155,7 @@ const EditJobs = () => {
                 placeholder="Ex. Pune"
                 {...register("jobLocation", { required: true })}
               />
-              {errors.minPrice && <span className="create-job-error">This field is required</span>}
+              {/* {errors.minPrice && <span className="create-job-error">This field is required</span>} */}
             </div>
             
           </div>
@@ -170,7 +165,7 @@ const EditJobs = () => {
               <label className="block text-primary py-1.5 text-lg">Salary Type
               </label>
               <select {...register("salaryType")} className="create-job-input">
-                <option value="Hourly">{salaryType}</option>
+                <option value={salaryType}>{salaryType}</option>
                 <option value="Hourly">Hourly</option>
                 <option value="Weekly">Weekly</option>
                 <option value="Monthly">Monthly</option>
@@ -181,7 +176,7 @@ const EditJobs = () => {
                 <label className="block text-primary py-1.5 text-lg">Experience Level
               </label>
               <select {...register("experienceLevel")} className="create-job-input">
-                <option value="Any experience">{experienceLevel}</option>
+                <option value={experienceLevel}>{experienceLevel}</option>
                 <option value="Any experience">Any experience</option>
                 <option value="Internship">Internship</option>
                 <option value="Work remotely">Work remotely</option>
@@ -198,15 +193,15 @@ const EditJobs = () => {
               <CreatableSelect
                 className="create-job-input border-none"
                 {...register("skills")}
+                defaultValue={skills}
                 options = {options}
                 // value={skills}
                 onChange={setSelectSkills}
-                defaultValue={selectSkills}
                 placeholder = 'Ex: HTML, CSS, Add Skill'
                 isMulti
               />
               
-              {errors.jobTitle && <span className="create-job-error">This field is required</span>}
+              {/* {errors.jobTitle && <span className="create-job-error">This field is required</span>} */}
             </div>
           </div>
           {/* row -- 6 */}
@@ -222,7 +217,7 @@ const EditJobs = () => {
                 placeholder="Ex: https://www.pexels.com/images/logo"
                 {...register("companyLogo", {required: true})}
               />
-              {errors.companyLogo && <span className="create-job-error">This field is required</span>}
+              {/* {errors.companyLogo && <span className="create-job-error">This field is required</span>} */}
             </div>
             <div className="lg:w-1/2 w-full">
             <label className="block text-primary py-1.5 text-lg">Salary Employment Type
@@ -249,7 +244,7 @@ const EditJobs = () => {
                 rows={6}
               />
               
-              {errors.jobTitle && <span className="create-job-error">This field is required</span>}
+              {/* {errors.jobTitle && <span className="create-job-error">This field is required</span>} */}
             </div>
           </div>
           {/* Last row */}
@@ -267,7 +262,7 @@ const EditJobs = () => {
                 {...register("postedBy", {required: true})}
               />
               
-              {errors.postedBy && <span className="create-job-error">This field is required</span>}
+              {/* {errors.postedBy && <span className="create-job-error">This field is required</span>} */}
             </div>
           </div>
           <div className="pt-4">
